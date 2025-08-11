@@ -16,6 +16,13 @@ export class AuthGuard implements CanActivate {
     }
 
     checkAuth(request: Request): boolean {
-        return true;
+        try {
+            if (!request.headers.authorization) return false;
+            const token: string = request.headers.authorization.split('Bearer ')[1];
+            this.adminService.verify(token);
+        } catch (e) {
+            return false;
+        }
+        return true;    
     }
 }
