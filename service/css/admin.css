@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NanumSquareR.ttf) format('truetype');
+}
+
+body, button, select, textarea {font-family:'나눔스퀘어', 'Nanum Square', '맑은 고딕', 'Malgun Gothic', 'Dotum', '돋움', 'gulim', '굴림', Helvetica, sans-serif; font-weight:400;
+    font-size:0.9rem;}
+body{padding:10px;}
+input[type=text], input[type=password]{background-color:#F4F4F4;border:1px solid #DDD;padding:7px;color:#333;}
+button{cursor:pointer;}
+ul, li{list-style:none;padding:0;margin:0;}
+main{display:inline-block;width:100%;text-align:center;}
+
+main .loginBox{width:300px;border:1px solid #CCC;display:inline-block;}
+main .loginBox .loginTit{display:inline-block;width:100%;background-color:#000;text-align:center;color:#FFF;
+    padding:13px 0px;font-weight:700;font-size:1.1rem;}
+main .loginBox .loginFrm{display:inline-block;width:calc(100% - 20px);padding:10px;}
+main .loginBox .loginFrm dl{display:flex;-webkit-box-align:center;align-items:center;position:relative;
+    margin:0;padding:8px 0px 3px 0px;flex-wrap:wrap;height:auto;}
+main .loginBox .loginFrm dl dt{width:80px;}
+main .loginBox .loginFrm dl dd{width:calc(100% - 80px);margin:0;}
+main .loginBox .loginFrm .loginBtnWrap{display:inline-block;padding:15px 0px 5px 0px;}
+main .loginBox .loginFrm .loginBtnWrap button{padding:8px 30px;background:none;border:none;
+    font-size:1.0rem;text-decoration:underline;font-weight:700;}
+
+main .mainHeader{padding:20px 0px;font-size:1.5em;text-align:center;font-weight:700;}
+main .mainBox{width:400px;display:inline-block;}
+main .mainBox li{border-bottom:1px solid #CCC;padding:7px 0px;display:flex;font-size:0.9rem;}
+main .mainBox li:first-child{background-color:#F4F4F4;border-top:2px solid #000;font-weight:700;}
+main .mainBox li:last-child{border-bottom:1px solid #000;}
+main .mainBox li div{float:left;}
+main .mainBox li div span{display:inline-block;margin-top:5px;}
+main .mainBox li div:first-child{width:200px;border-right:1px solid #CCC;}
+main .mainBox li div:last-child{width:calc(100% - 202px);}
+main .mainBox li button{padding:3px 10px;border:1px solid #333;border-radius:3px;background-color:#FFF;
+    box-shadow:3px 3px #ddd;font-size:0.8rem;}
+
+.pager{display:inline-block;text-align:center;margin-top:10px;}
+.pager .pageBtn{padding:5px;float:left;cursor:pointer;color:#999;}
+.pager .pageBtn.active{color:#000;}
+
+.page{width:650px;display:inline-block;margin-left:calc(50% - 300px);}
+/* AlertDialog :: Start */
+.alertBox{width:100%;height:100%;display:none;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,0.2);z-index:99;}
+.alertBox.on{display:table;}
+.alertDialog{width:400px;min-height:130px;background-color:#FFF;border-radius:10px;position:relative;
+  transform:scale(0.5);transition:transform 0.2s ease-out;border:1px solid #8a8169;margin-left:calc(50% - 200px);}
+.alertDialog.on{transform:scale(1);}
+.alertButtons{text-align:center;position:absolute;left:calc(50% - 20px);bottom:-20px;}
+.alertBtn{width:40px;height:40px;border:1px solid #8a8169;border-radius:25px;background:url(../image/ico_close_black.png) no-repeat center center;
+  background-color:#FFF;background-size:20px;}
+.alertDialog .btnClose{position:absolute;top:3px;right:6px;width:40px;height:40px;background:url(../image/btn_close.png) no-repeat center center; background-size:50px auto;}
+.alertBody{display:inline-block;width:100%;}
+.alertBody span{display:inline-block;width:calc(100% - 20px);line-height:20px;font-size:0.9em;padding:5px 10px 10px 10px;text-align:center;}
+.alertHead{text-align:left;height:35px;font-size:1.05em;line-height:35px;font-weight:700;padding-left:20px;padding-top:15px;}
+.alertAlign{position:relative;display:table-cell;height:100%;vertical-align:middle;width:100%;padding:0px 35px;}
+.confirmButtons{text-align:center;position:absolute;bottom:-20px;left:calc(50% - 60px);}
+.confirmBtnNo{width:40px;height:40px;border:1px solid #8a8169;border-radius:25px;background:url(../image/ico_close_red.png) no-repeat center center;
+  background-color:#FFF;background-size:20px;margin-right:20px;}
+.confirmBtnYes{width:40px;height:40px;border:1px solid #8a8169;border-radius:25px;background:url(../image/ico_ok.png) no-repeat center center;
+  background-color:#FFF;background-size:30px;margin-left:20px;}
+/* AlertDialog :: End */
+
+
+.storeBox{width:100%;height:100%;display:table;overflow-x:hidden;position:fixed;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,0.4);z-index:10;}
+.storeDialog{height:100%;width:550px;background-color:#FFF;position:fixed;right:0;transform:translate(100%, 0);transition:transform 0.25s ease-out;padding:10px;
+  box-shadow:5px 16px 10px 10px rgba(0, 0, 0, 0.3);}
+.storeDialog.on{transform:translate(0, 0);}
+
+.storeBox .storeHeader{display:inline-block;width:100%;text-align:center;height:60px;line-height:60px;margin-top:30px;
+  font-size:1.5em;font-weight:bold;margin-bottom:10px;}
+.storeBox .storeBody .regTb{width:100%;border-collapse:collapse;border:1px solid #CCC;}
+.storeBox .storeBody .regTb tr{line-height:40px;}
+.storeBox .storeBody .regTb td{border:1px solid #CCC;}
+.storeBox .storeBody .regTb td.regTH{background-color:#F4F4F4;text-align:center;}
+.storeBox .storeBody .regTb td.regTD{padding-left:15px;}
+.storeBox .storeBody .taRow{line-height:120px;}
+.storeBox .storeBody .taRow td.regTD{padding-top:10px;padding-bottom:10px;}
+.storeBox .storeBody .taRow textarea{border-radius:3px;height:100px;width:calc(100% - 38px);border:1px solid #CCC;box-shadow:0px 0px 4px 1px rgba(143, 138, 124, 0.3);
+  padding:10px;}
+.storeBox .storeBody .regInp{width:120px;border-bottom:1px solid #999;font-size:0.9em;outline:none;color:#999;}
+.storeBox .storeBody .barComponent{margin-left:0px;line-height:20px;}
+.storeBox .storeBody .regBtns{display:inline-block;width:100%;text-align:center;margin-top:20px;}
+.storeBox .storeBody .regBtns button{width:120px;border:1px solid #666;padding:10px 0px;border-radius:5px;text-align:center;cursor:pointer;}
+.storeBox .storeBody .regBtns button.okReg{background-color:#1994da;border:3px solid #74b4dd;color:#FFF;margin-left:20px;}
+
+.storeBox li{border-bottom:1px solid #CCC;padding:7px 0px;display:flex;font-size:0.9rem;}
+.storeBox li:first-child{background-color:#F4F4F4;border-top:2px solid #000;font-weight:700;}
+.storeBox li:last-child{border-bottom:1px solid #000;}
+.storeBox li span{border-right:1px solid #CCC;float:left;display: block;width:250px;text-align:center;}
+.storeBox li span:first-child{width:150px;}
+.storeBox li span:last-child{width:150px;border-right:none;}
+.storeBox .buttonWrap{padding:20px 0px;text-align:center;}
+.storeBox .buttonWrap button{background:url(../image/btn_close.png) no-repeat center left;background-size:35px;
+    padding:8px 15px 6px 35px;border:1px solid #333;border-radius:5px;box-shadow:3px 3px #DDD;}
+
+
+
+.loadingContainer{width:100%;height:100%;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;
+    background-color:rgba(0,0,0,0.4);z-index:100;text-align:center;}
+.loadingContainer svg{position:absolute;top:calc(50% - 30px);left:calc(50% - 30px);}
+.blockContainer{width:100%;height:100%;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;
+    background-color:rgba(0,0,0,0);z-index:8;text-align:center;}
+
+
